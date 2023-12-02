@@ -482,10 +482,7 @@ dd {
     grid-column-start: 1;
     grid-column-end: 2;
 }
-
-
 }
-  
   
 /*large screen size*/
 @media screen and (min-width: 1280px) {
