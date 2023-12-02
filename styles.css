@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -47,27 +50,475 @@ table {
     border-spacing: 0;
 }
 
+
 /* start code global styles - mobile first */
-@import
-url('https://fonts.google.com/share?selection.family=Bebas%20Neue%7CMontserrat:ital,wght@0,400;0,700;1,400');
+
 html {
-    /*background-color: ;*/
+    background-color: rgba(122, 191, 191, .5);
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
     width: 414px;
     margin: 0 auto;
-    /*background-color: ;*/
+    background-color: #f2f2f2;
 }
+.sideDish {
+    background-color: #7ABFBF;
+}
+
+/*menu styling*/
+menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    width: 414px;
+}
+
+menu li {
+    position: relative;
+    text-align: center;
+    margin: 15px;
+}
+  
+menu a {
+    flex-direction: column;
+    color:#EB5428;
+    font-family: 'Bebas Neue';
+    text-decoration: none;
+}
+/*site search*/
+
+.search label {
+    display: block;
+    visibility: hidden;
+}
+
+.search input,
+.search label {
+    margin: 0.4rem 0;
+    
+}
+
+.tacos img {
+    width: 100%;
+    height: auto;
+}
+
+/*recipe details*/
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+dt {
+    flex-basis: 30%; 
+    text-align: left;
+}
+dd {
+    flex-basis: 50%; 
+    margin: 0;
+}
+dl dd {
+    line-height: 1.5em;
+}
+/*recipe - ingredients ul directions ol*/
+.recipe ul {
+    list-style: square;
+    margin-left: 25px;
+    line-height: 2em;
+ }
+.recipe ol {
+    list-style-type: decimal;
+    margin-left: 25px;
+    line-height: 1.5em;
+ }
+ ol li {
+    margin: 10px 0 10px 0;
+ }
+ 
+ .sideDish h2 {
+    text-align: center;   
+}
+.sideDish section {
+    display: block;
+}
+.sideDish img {
+    display: inline-block;
+    grid-column-start: 1;
+}
+.sideDish h3, .sideDish p {
+    display: inline-block;
+}
+
+
+
+/*nav styling*/
+nav img {
+    max-width: 70px;
+}
+header h1 {
+    background-color: #F2F2F2;
+    color: #000000;
+    position: relative;
+    z-index: 5;
+    margin-top: 50px;
+    padding: 25px 0 25px 0;
+}
+[href="search"] {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    margin-top: 100px;
+}
+nav {
+    width: 414px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+menu li {
+    position: relative;
+    top: 0;
+    Margin-top: 30px;
+}
+.mainNav {
+    width: 50px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+nav ul {
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+    background-color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    transition: max-height .2s ease-out;
+}
+nav h2 {
+    visibility: hidden;
+    height: 1px;
+}
+
+nav li a {
+    display: block;
+    padding: 16px 16px;
+    text-decoration: none;
+    color: #EB5428;
+}
+
+[href="#Avatar"] {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 300px;
+}
+a:hover, input:hover {
+    /*background-color: #ffffff;*/
+}
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+nav label  span{
+    /*background-color: #ffffff;*/
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+nav label :before, label :after {
+    /*background: #ffffff;*/
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+nav label span:before {
+    top: 5px;
+}
+nav label span:after {
+    top: -5px;
+}
+
+nav input {
+    display: none;
+}
+nav input:checked ~ ul {
+    max-height: 500px;
+}
+nav input:checked ~ label span {
+    background: transparent;
+}
+nav input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+nav input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+nav input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+    
+
+/*social styling*/
+
+.social-media {
+    display: flex;
+    justify-content: flex-end; 
+    list-style: none; 
+}
+
+.social-media li {
+    margin: 0 10px; 
+}
+
+.social-media svg {
+    width: 40px; 
+    height: 40px; 
+}
+
+
+  
+
+/*footer styling*/
+footer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+}
+  
+footer p {
+    margin: 10px 0;
+}
+  
+footer img {
+    max-width: 50%;
+    margin-top: 20px; 
+}
+
+
+
+
+/*text styling*/
+h1, 
+h2, 
+h3, 
+menu li, 
+.social-media li, 
+footer p,
+nav li {
+    font-family: 'Bebas Neue';
+}
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+h2 {
+    font-size: 30px;
+    
+}
+h3 {
+    font-size: 25px;
+}
+
+.social-media, 
+footer p {
+    font-size: 20px;
+}
+menu li {
+    color:#EB5428;
+    font-size: 20px;
+}
+nav ul {
+    font-family: 'Bebas Neue'
+}
+nav ul {
+    color:#EB5428;
+}
+
+p, 
+dd, 
+li, 
+nav, 
+input {
+    font-family: 'Montserrat'
+}
+p, 
+dd, 
+li, 
+nav, 
+input {
+    font-size: 16px;
+}
+dt {
+    font-family: 'Montserrat'
+}
+dt {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+p {
+    line-height: 1.5em;
+    margin: 10px;
+}
+h1, h2, h3 {
+    text-align: center;
+    margin: 20px 0 20px 10px;
+}
+.sideDish h2 {
+    padding-top: 20px;
+}
+
+article h2 {
+    text-align: center;
+}
+
+.social-media li {
+    color: #EB5428;
+}
+.social-media h2, 
+.social-media h3 {
+    visibility: hidden;
+}
+footer h3 {
+    visibility: hidden;
+}
+.sideDish h3 {
+    text-align: left;
+}
+
+
+
 /* medium screen size */
 @media screen and (min-width: 768px) {
     body { 
     width: 768px;
 }
+header h1 {
+    text-align: left;
 }
+nav ul {
+    width: 768px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    z-index:1;
+    display: flex;
+}
+nav img {
+    max-width: 40px;
+}
+dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+dt {
+    flex-basis: 40%; 
+    text-align: right;
+    margin-right: 20px;
+}
+
+dd {
+    flex-basis: 50%; 
+    margin: 0;
+}
+  
+[href="#home"] {
+    position: relative;
+    left: 0;
+    padding: 16px 16px;
+}
+.recipe {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.recipe div {
+    flex: 1;
+    margin-right: 20px; 
+}
+  
+.recipe h2 {
+    text-align: center; 
+}
+  
+.recipe ol,
+.recipe ul {
+    margin-left: 25px; 
+    padding: 0; 
+}
+.recipe ol {
+    list-style-type: decimal;
+}
+.search {
+    visibility: hidden;
+}  
+.dropDown label, nav input {
+    visibility: hidden;
+}
+.sideDish {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.sideDish h2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+
+}
+  
+  
 /*large screen size*/
 @media screen and (min-width: 1280px) {
     body {
     width: 1280px;
+}
+.details {
+    background-color: #0D0D0D;
+}
+.tacos menu {
+    background-color: #ffffff;
+    border: solid;
+    border-color: #EB5428;
+}
+.tacos {
+    background-color: #F2F2F2;
+}
+nav label, nav input {
+    visibility: hidden;
+}
+.recipe {
+    background-color: #F2F2F2;
+}
+.details h2, dt, dd {
+    color:#7ABFBF;
+}
+/*.details dl {
+    display: flex;
+    flex-direction: ;
+}*/
+
+.details dl {
+display: flex;
+flex-wrap: nowrap;
 }
 }
